@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS messages (
+  `id_messages` INT NOT NULL AUTO_INCREMENT,
+  `message` VARCHAR(280) NOT NULL,
+  `author` VARCHAR(45) NOT NULL,
+  `date` VARCHAR(45) NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY (`id_messages`));
