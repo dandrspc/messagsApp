@@ -23,7 +23,23 @@ public class MessagesService {
     }
 
     public static void updateMessage() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Write your new message");
+        String message = sc.nextLine();
+
+        System.out.println("Write the ID of the message to edit");
+        int id = sc.nextInt();
+        Message update = new Message();
+        update.setIdMessage(id);
+        update.setMessage(message);
+
+        MessagesDAO.updateMessage(update);
     }
 
-    public static void deleteMessage(){}
+    public static void deleteMessage(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Write the ID of the message to delete");
+        int id = sc.nextInt();
+        MessagesDAO.deleteMessage(id);
+    }
 }
